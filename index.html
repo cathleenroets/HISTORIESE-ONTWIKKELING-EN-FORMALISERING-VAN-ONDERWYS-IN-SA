@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interaktiewe Historiese Reis</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div>
+                <span class="eyebrow">OPVGI372 · OPVOEDKUNDE 3B</span>
+                <h1>Interaktiewe Historiese Reis</h1>
+                <p>Die formalisering van onderwys in Suid-Afrika</p>
+            </div>
+
+            <div class="progress-box">
+                <span>JOU VORDERING</span>
+                <strong id="progressText">0 / 8</strong>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HOME / TYDLYN -->
+        <section id="timelinePage" class="page active">
+
+            <div class="intro">
+                <span class="section-label">INTERAKTIEWE TYDLYN</span>
+
+                <h2>Verken die tydlyn</h2>
+
+                <p>
+                    Kies ’n historiese keerpunt om die ontwikkeling
+                    en formalisering van onderwys verder te ondersoek.
+                </p>
+            </div>
+
+
+            <div id="timelineGrid" class="timeline-grid">
+                <!-- JavaScript plaas die 8 blokkies hier -->
+            </div>
+
+
+            <div class="main-actions">
+
+                <button class="primary-button" onclick="showTimelineGame()">
+                    BOU DIE TYDLYN
+                </button>
+
+                <button class="secondary-button" onclick="showFinalQuiz()">
+                    GROOT UITDAGING
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DETAIL PAGE -->
+        <section id="detailPage" class="page">
+
+            <button class="back-button" onclick="showTimeline()">
+                ← TERUG NA TYDLYN
+            </button>
+
+            <div id="detailContent"></div>
+
+        </section>
+
+
+        <!-- TIMELINE GAME -->
+        <section id="timelineGamePage" class="page">
+
+            <button class="back-button" onclick="showTimeline()">
+                ← TERUG NA TYDLYN
+            </button>
+
+            <div class="game-container">
+
+                <span class="section-label">HISTORIESE UITDAGING</span>
+
+                <h2>Bou die tydlyn</h2>
+
+                <p>
+                    Plaas die historiese keerpunte in die korrekte
+                    chronologiese volgorde.
+                </p>
+
+                <div id="sortableEvents" class="sortable-events">
+                    <!-- JavaScript -->
+                </div>
+
+                <button class="primary-button" onclick="checkTimeline()">
+                    KONTROLEER TYDLYN
+                </button>
+
+                <div id="timelineFeedback"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL QUIZ -->
+        <section id="finalQuizPage" class="page">
+
+            <button class="back-button" onclick="showTimeline()">
+                ← TERUG NA TYDLYN
+            </button>
+
+            <div class="quiz-container">
+
+                <span class="section-label">
+                    FINALE UITDAGING
+                </span>
+
+                <h2>Toets jou kennis</h2>
+
+                <p id="finalQuizProgress"></p>
+
+                <div id="finalQuizQuestion"></div>
+
+                <div id="finalQuizOptions"></div>
+
+                <div id="finalQuizFeedback"></div>
+
+                <button
+                    id="nextFinalQuestion"
+                    class="primary-button hidden"
+                    onclick="nextFinalQuizQuestion()">
+                    VOLGENDE
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL RESULT -->
+        <section id="resultPage" class="page">
+
+            <div class="result-container">
+
+                <span class="section-label">
+                    JOU HISTORIESE REIS
+                </span>
+
+                <h2>Reis voltooi</h2>
+
+                <div class="score-circle">
+                    <span id="finalScore">0</span>
+                    <small>/ 10</small>
+                </div>
+
+                <p id="resultMessage"></p>
+
+                <div class="final-insight">
+
+                    <h3>
+                        Formalisering beteken nie outomaties gelykheid nie
+                    </h3>
+
+                    <p>
+                        Die ontwikkeling van onderwys was ’n geleidelike
+                        proses waarin onderwys toenemend deur skole,
+                        onderwysers, kurrikula, staatsinstellings en
+                        wetgewing georganiseer is.
+                    </p>
+
+                    <div class="process-line">
+                        <span>GEMEENSKAP</span>
+                        <span>↓</span>
+                        <span>SKOOL</span>
+                        <span>↓</span>
+                        <span>KURRIKULUM</span>
+                        <span>↓</span>
+                        <span>STAAT</span>
+                        <span>↓</span>
+                        <span>WETGEWING</span>
+                        <span>↓</span>
+                        <span>NASIONALE STELSEL</span>
+                    </div>
+
+                </div>
+
+                <button class="primary-button" onclick="showTimeline()">
+                    VERKEN WEER
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Interaktiewe leerhulpmiddel · Geskiedenis van Onderwys in Suid-Afrika
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
